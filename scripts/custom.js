@@ -13,14 +13,20 @@ $(document).ready(function() {
 		},1000);		
 	});
 
-	$('#dividas').DataTable({
-		paging: false,
-		searching: false,
-		ordering: false,
-		"info": false
-	});
+    $('.btn-boleto').click(function () {
+        $("#modal-detalhes").removeClass("md-show");
+        setTimeout(function () {
+            $(".success-modal").addClass("md-show");
 
-	
+        }, 700);
+    });
+
+    $('#modal-boleto .md-close, .md-container').click(function () {
+        if ($('#modal-boleto').hasClass('md-show')) {
+            $("#modal-boleto").removeClass("md-show");
+        }
+    });
+
 
 });
 

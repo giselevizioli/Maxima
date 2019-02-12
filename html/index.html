@@ -1,110 +1,125 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="initial-scale=1.0">
-	<title>Banco Máxima</title>
-	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" href="../scripts/datatables.min.css">
-	<link rel="stylesheet" type="text/css" href="../scripts/jquery-niftymodals-master/dist/jquery.niftymodals.css">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <title>Banco Máxima</title>
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../scripts/jquery-niftymodals-master/dist/jquery.niftymodals.css">
+    <link rel="stylesheet" type="text/css" href="../scripts/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-	<div class="main-scroller">
-		<header>
-			<div class="header-wrapper">
-				<div class="logo-wrapper"></div>
-			</div>
-		</header>
-		<div class="main-wrapper">
-			<div class="container-triangles">
-				<h1>Consultar CPF</h1>
-				<form class="form">
-					<input type="text" placeholder="CPF">
-					<input type="password" placeholder="Senha">
-					<button type="submit" id="login-button">CONSULTAR</button>
-				</form>
-			</div>
+    <div class="main-scroller">
+        <header>
+            <div class="header-wrapper">
+                <div class="logo-wrapper"></div>
+            </div>
+        </header>
+        <div class="main-wrapper">
+            <div class="container-triangles">
+                <h1>Consultar CPF</h1>
+                <form class="form">
+                    <input type="text" placeholder="CPF">
+                    <input type="password" placeholder="Senha">
+                    <button type="submit" id="login-button">CONSULTAR</button>
+                </form>
+            </div>
 
-			<ul class="triangles">
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</div>
-		<div class="customer-data">
-			<div class="container-customer">
-				<p>Olá, Daniel!</p>
-			<h2>Você possui algumas dívidas em seu nome:</h2>
-			<div class="flex-container">
-				<table id="dividas">
-					<thead>		
-						<tr>
-							<th>Empresa</th>
-							<th>Valor</th>
-							<th>Vencimento</th>
-							<th>Opções</th>
-						</tr>				
-					</thead>
-					<tbody>
-						<tr>
-							<td>Net Serviços LTDA</td>
-							<td>R$350,80</td>
-							<td>20/01/2017</td>
-							<td>
-								<button class="md-trigger detail-btn" data-modal="modal-detalhes">Detalhes</button>
-								<button class="md-trigger modal-btn" data-modal="modal-boleto">Quitar dívida</button>
-							</td>
-						</tr>
-						<tr>
-							<td>Net Serviços LTDA</td>
-							<td>R$457,83</td>
-							<td>20/01/2017</td>
-							<td>
-								<button class="md-trigger detail-btn" data-modal="modal-detalhes">Detalhes</button>
-								<button class="md-trigger modal-btn" data-modal="modal-boleto">Quitar dívida</button>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>	
+            <ul class="triangles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="customer-data">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="container-customer">
+                            <h2>Histórico do cliente:</h2>
+                            <div class="flex-container">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3">Cliente:</label>
+                                    <p class="col-sm-9">Daniel Soares Pimenta</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3">CPF:</label>
+                                    <p class="col-sm-9">12345678911</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3">Orgão:</label>
+                                    <p class="col-sm-9">Empresa XYZ</p>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3">Data de nascimento:</label>
+                                    <p class="col-sm-9">25/06/1986</p>
+                                </div>
+                                <button class="md-trigger detail-btn" data-modal="modal-detalhes">Liquidar</button>
+                                <!--<button class="md-trigger modal-btn" data-modal="modal-boleto">Amortizar</button>-->
 
-	<div class="md-container md-effect-3" id="modal-detalhes">
-		<div class="md-content">
-			<h3>Net Serviços LTDA</h3>
-		<div>
-			<p>Valor da dívida: R$457,83</p>
-			<p>Data de vencimento: 20/01/2017</p>
-			<p>Contato: (11)99999-9999</p>
-			<button class="md-close">Ok</button>
-		</div>
-		</div>
-	</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
 
-	<div class="md-container success-modal md-effect-5" id="modal-boleto">
-		<div class="md-content">
-			<h3>Boleto gerado com sucesso!</h3>
-			<div>
-				<p>Efetue o pagamento do boleto para que a dívida seja quitada</p>
-				<button class="md-close">Ok</button>
-			</div>
-		</div>
-	</div>
+    <div class="md-container md-effect-3" id="modal-detalhes">
+        <div class="md-content">
+            <h3>Liquidar</h3>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="container-customer">
+                        <div class="flex-container">
+                            <div class="row">
+                                <label class="control-label col-sm-3">Data Liquidação:</label>
+                                <input class="col-sm-3" value="25/02/2019" readonly/>
+                                <button class="col-sm-2 btn-custom">Calcular</button>
+                            </div>
+                            <div class="row">
+                                <label class="control-label col-sm-3">Valor Liquidação:</label>
+                                <input class="col-sm-3" value="x" readonly />
+                            </div>
+                            <div class="row">
+                                <ul>
+                                    <li>Juros</li>
+                                    <li>Impostos</li>
+                                    <li>Outros encargos</li>
+                                </ul>
+                            </div>                            
+                            <div class="row">
+                                <button class="md-close btn-custom" data-modal="modal-detalhes">Voltar</button>
+                                <button class="md-trigger btn-custom btn-boleto">Gerar Boleto</button>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<div class="md-overlay"></div>
-	
-	<script type="text/javascript" src="../scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="../scripts/datatables.min.js"></script>	
-	<script type="text/javascript" src="../scripts/jquery-niftymodals-master/dist/jquery.niftymodals.js"></script>
-	<script type="text/javascript" src="../scripts/custom.js"></script>
+    <div class="md-container success-modal md-effect-5" id="modal-boleto">
+        <div class="md-content">
+            <h3>Boleto gerado com sucesso!</h3>
+            <div>
+                <p>Efetue o pagamento do boleto para que a dívida seja quitada</p>
+                <button class="md-close" style="margin: 0 auto;">Ok</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="md-overlay"></div>
+
+    <script type="text/javascript" src="../scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-niftymodals-master/dist/jquery.niftymodals.js"></script>
+    <script type="text/javascript" src="../scripts/Bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/custom.js"></script>
 </body>
 </html>
