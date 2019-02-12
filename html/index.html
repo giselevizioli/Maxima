@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0">
+	<title>Banco Máxima</title>
+	<link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../scripts/datatables.min.css">
+	<link rel="stylesheet" type="text/css" href="../scripts/jquery-niftymodals-master/dist/jquery.niftymodals.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<div class="main-scroller">
+		<header>
+			<div class="header-wrapper">
+				<div class="logo-wrapper"></div>
+			</div>
+		</header>
+		<div class="main-wrapper">
+			<div class="container-triangles">
+				<h1>Consultar CPF</h1>
+				<form class="form">
+					<input type="text" placeholder="CPF">
+					<input type="password" placeholder="Senha">
+					<button type="submit" id="login-button">CONSULTAR</button>
+				</form>
+			</div>
+
+			<ul class="triangles">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<div class="customer-data">
+			<div class="container-customer">
+				<p>Olá, Daniel!</p>
+			<h2>Você possui algumas dívidas em seu nome:</h2>
+			<div class="flex-container">
+				<table id="dividas">
+					<thead>		
+						<tr>
+							<th>Empresa</th>
+							<th>Valor</th>
+							<th>Vencimento</th>
+							<th>Opções</th>
+						</tr>				
+					</thead>
+					<tbody>
+						<tr>
+							<td>Net Serviços LTDA</td>
+							<td>R$350,80</td>
+							<td>20/01/2017</td>
+							<td>
+								<button class="md-trigger detail-btn" data-modal="modal-detalhes">Detalhes</button>
+								<button class="md-trigger modal-btn" data-modal="modal-boleto">Quitar dívida</button>
+							</td>
+						</tr>
+						<tr>
+							<td>Net Serviços LTDA</td>
+							<td>R$457,83</td>
+							<td>20/01/2017</td>
+							<td>
+								<button class="md-trigger detail-btn" data-modal="modal-detalhes">Detalhes</button>
+								<button class="md-trigger modal-btn" data-modal="modal-boleto">Quitar dívida</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>	
+
+	<div class="md-container md-effect-3" id="modal-detalhes">
+		<div class="md-content">
+			<h3>Net Serviços LTDA</h3>
+		<div>
+			<p>Valor da dívida: R$457,83</p>
+			<p>Data de vencimento: 20/01/2017</p>
+			<p>Contato: (11)99999-9999</p>
+			<button class="md-close">Ok</button>
+		</div>
+		</div>
+	</div>
+
+	<div class="md-container success-modal md-effect-5" id="modal-boleto">
+		<div class="md-content">
+			<h3>Boleto gerado com sucesso!</h3>
+			<div>
+				<p>Efetue o pagamento do boleto para que a dívida seja quitada</p>
+				<button class="md-close">Ok</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="md-overlay"></div>
+	
+	<script type="text/javascript" src="../scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="../scripts/datatables.min.js"></script>	
+	<script type="text/javascript" src="../scripts/jquery-niftymodals-master/dist/jquery.niftymodals.js"></script>
+	<script type="text/javascript" src="../scripts/custom.js"></script>
+</body>
+</html>
