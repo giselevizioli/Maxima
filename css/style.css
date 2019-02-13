@@ -122,15 +122,19 @@ form input::placeholder {
 }
 
 .customer-data {
-	background: white;
+	background: #e4e4e4;
 	width: auto;
 	height: calc(100% - 100px);
 	display: none;
 	position: absolute;
 	top: 100px;
-	padding: 20px;
-	border-radius: 10px;
+	padding: 20px 10%;
 	color: #2d2d2d;
+}
+
+#modal-detalhes .container-customer {
+	box-shadow: none;
+	height: auto;
 }
 
 #dividas tr th {
@@ -140,7 +144,14 @@ form input::placeholder {
 }
 
 .container-customer {
-	padding: 15px ;
+	padding: 15px;
+	background: white;
+	border-radius: 4px;
+	height: -webkit-fill-available;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 1px 1px 8px black;
 }
 
 .customer-data p {
@@ -321,52 +332,68 @@ form input::placeholder {
 }
 
 .customer-data, .container-customer {
-    width: 100%;
+	width: 100%;
 }
 
 .flex-container {
-    margin: 15px 0;
+	margin: 15px 0;
+	min-width: 290px;
+}
+
+.title-wrapper {
+	border-bottom: 2px solid #dcdcdc;
+	/* width: 80%; */
+	text-align: center;
 }
 
 #modal-detalhes .md-content {
-    max-width: 70%;
+	max-width: 70%;
 }
 
 #modal-detalhes input {
-    border: none;
+	border: 2px solid #7da2bd;
+	border-radius: 4px;
 }
 
 .md-content button {
-    margin: 0 10px;
+	margin: 0 10px;
 }
 
 .md-content .row {
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .md-content ul {
-    list-style: none;
+	list-style: none;
 }
 
 .md-content ul li {
-    font-size: 0.8em;
+	font-size: 0.8em;
 }
 
 .btn-custom {
-    width: 120px;
-    padding: 8px 10px;
-    background: #2b7ab3;
-    color: white;
-    font-weight: 600;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+	width: 120px;
+	padding: 8px 10px;
+	background: #2b7ab3;
+	color: white;
+	font-weight: 600;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 .btn-boleto {
-    background: #8bc34a;
+	background: #8bc34a;
 }
 
 .btn-custom:hover {
-    filter: brightness(70%);
+	filter: brightness(70%);
+}
+
+.datepicker-container {
+	z-index: 9999999999 !important;
+}
+
+.datepicker-panel {
+	color: black !important;
 }
