@@ -20,7 +20,7 @@ $(document).ready(function() {
 		},3000);		
     });
 
-    $("#money").inputmask('decimal', {
+    $(".money").inputmask('decimal', {
         'alias': 'numeric',
         'groupSeparator': '.',
         'autoGroup': true,

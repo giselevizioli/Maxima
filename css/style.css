@@ -364,10 +364,15 @@ button {
     margin-bottom: 10px;
 }
 
+.no-border {
+    border: none !important;
+}
+
 .second-container input {
-    height: 40px;
     text-align: left !important;
     color: #797f8a;
+    border-radius: 4px;
+    border: 2px solid #b9b9b9;
 }
 
 .second-container ul {
@@ -379,8 +384,12 @@ button {
 	margin: 0 10px;
 }
 
+.first-container p {
+    text-align: right !important;
+}
+
 .md-content .row {
-	margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .md-content ul {

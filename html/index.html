@@ -47,48 +47,74 @@
                         <div class="title-wrapper">
                             <h2>Histórico do cliente:</h2>
                         </div>
-                        <div class="flex-container">
-                            <div class="form-group">
+                        <div class="flex-container first-container">
+                            <div class="row">
                                 <label class="control-label col-sm-3">Cliente:</label>
-                                <p class="col-sm-9">Daniel Soares Pimenta</p>
+                                <p class="col-sm-5">Daniel Soares Pimenta</p>
                             </div>
-                            <div class="form-group">
+                            <div class="row">
                                 <label class="control-label col-sm-3">CPF:</label>
-                                <p class="col-sm-9">12345678911</p>
+                                <p class="col-sm-5">12345678911</p>
                             </div>
-                            <div class="form-group">
+                            <div class="row">
                                 <label class="control-label col-sm-3">Orgão:</label>
-                                <p class="col-sm-9">Empresa XYZ</p>
+                                <p class="col-sm-5">Empresa XYZ</p>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label col-sm-3">Data de nascimento:</label>
-                                <p class="col-sm-9">25/06/1986</p>
+                            <div class="row">
+                                <label class="control-label col-sm-4">Data de nascimento:</label>
+                                <p class="col-sm-4">25/06/1986</p>
                             </div>
-                            <button class="detail-btn" id="expandBtn">Liquidar</button>
+                            <button class="detail-btn" id="expandBtn">Detalhes</button>
                             <!--<button class="md-trigger modal-btn" data-modal="modal-boleto">Amortizar</button>-->
                             <div class="expanded-content" id="expandWrapper">
                                 <div class="col-sm-12">
                                     <div class="row">
                                         <div class="container-customer second-container">
                                             <div class="flex-container">
+                                                <h2 style="margin-bottom: 20px">Detalhes da dívida</h2>
                                                 <div class="row">
-                                                    <label class="control-label col-sm-4">Data Liquidação:</label>
-                                                    <input id="datepicker" class="col-sm-4" data-toggle="datepicker" />
-                                                    <button class="col-sm-3 btn-custom" style="margin-left: 10px">Calcular</button>
+                                                    <label class="control-label col-sm-4">Dívida Inicial:</label>
+                                                    <input class="col-sm-4 money no-border" placeholder="R$3.000,00" readonly />
                                                 </div>
                                                 <div class="row">
-                                                    <label class="control-label col-sm-4">Valor Liquidação:</label>
-                                                    <input class="col-sm-4" id="money" />
+                                                    <label class="control-label col-sm-4">Valor Provisionado:</label>
+                                                    <input class="col-sm-4 money no-border" placeholder="R$167,59" readonly />
                                                 </div>
                                                 <div class="row">
-                                                    <ul>
-                                                        <li>Juros</li>
-                                                        <li>Impostos</li>
-                                                        <li>Outros encargos</li>
-                                                    </ul>
+                                                    <label class="control-label col-sm-4">Juros do Período:</label>
+                                                    <input class="col-sm-4 money no-border" placeholder="R$23,89" readonly />
                                                 </div>
                                                 <div class="row">
-                                                    <button class="md-trigger btn-custom btn-boleto" data-modal="modal-boleto">Gerar Boleto</button>
+                                                    <label class="control-label col-sm-4">Dívida Final:</label>
+                                                    <input class="col-sm-4 money no-border" placeholder="R$3.226,02" readonly />
+                                                </div>
+                                                <div class="row">
+                                                    <label class="control-label col-sm-4">Crédito:</label>
+                                                    <input class="col-sm-4 money no-border" placeholder="R$234,68" readonly />
+                                                </div>
+                                                <div class="row">
+                                                    <label class="control-label col-sm-4">Valor total:</label>
+                                                    <input class="col-sm-4 money no-border" placeholder="R$2.991,34" readonly />
+                                                </div>
+                                                <div class="row">
+                                                    <div class="radio col-sm-3" style="padding-right: 0;">
+                                                        <label><input type="radio" name="optradio">Amortizar</label>
+                                                    </div>
+                                                    <div class="radio col-sm-3" style="padding-left: 0;">
+                                                        <label><input type="radio" name="optradio">Liquidar</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label class="control-label col-sm-4">Data de pagamento:</label>
+                                                    <input id="datepicker" class="col-sm-4" data-toggle="datepicker" style="height: 40px;" />
+                                                    <button class="col-sm-3 btn-custom" style="margin-left: 10px; height: 40px">Calcular</button>
+                                                </div>
+                                                <div class="row">
+                                                    <label class="control-label col-sm-4">Valor a pagar:</label>
+                                                    <input class="col-sm-4 money" />
+                                                </div>
+                                                <div class="row">
+                                                    <button class="md-trigger btn-custom btn-boleto" data-modal="modal-boleto" style="margin-top: 20px">Gerar Boleto</button>
                                                 </div>
                                             </div>
                                         </div>
