@@ -6,30 +6,40 @@ $(document).ready(function() {
 		setTimeout(function(){ 
 		}, 500);
 
-		$('.main-wrapper').fadeOut(700);
+        $('.main-wrapper').fadeOut(700);
+
+        setTimeout(function () {
+            $('.spin-overlay').fadeIn();
+            setTimeout(function () {
+                $('.spin-overlay').fadeOut();
+            }, 2000);
+        }, 1000);
 
 		setTimeout(function(){
 			$('.customer-data').fadeIn('slow');
-		},1000);		
-	});
-
-    $('.btn-boleto').click(function () {
-        $("#modal-detalhes").removeClass("md-show");
-        setTimeout(function () {
-            $(".success-modal").addClass("md-show");
-
-        }, 700);
+		},3000);		
     });
 
-    $('#modal-boleto .md-close, .md-container').click(function () {
-        if ($('#modal-boleto').hasClass('md-show')) {
-            $("#modal-boleto").removeClass("md-show");
-        }
+    $("#money").inputmask('decimal', {
+        'alias': 'numeric',
+        'groupSeparator': '.',
+        'autoGroup': true,
+        'digits': 2,
+        'radixPoint': ",",
+        'digitsOptional': false,
+        'allowMinus': false,
+        'prefix': 'R$',
+        'placeholder': ''
     });
 
     $('#datepicker').datepicker({
         language: 'pt-BR',
         format: 'dd-mm-yyyy'
+    });
+
+    $('#expandBtn').click(function () {
+        $('.expanded-content').toggleClass('container-expanded');
+        $('html,body').animate({ scrollTop: $('#expandWrapper').offset().top }, '500');
     });
 
 });

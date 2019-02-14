@@ -11,119 +11,124 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-	<div class="main-scroller">
-		<header>
-			<div class="header-wrapper">
-				<div class="logo-wrapper"></div>
-			</div>
-		</header>
-		<div class="main-wrapper">
-			<div class="container-triangles">
-				<h1>Consultar CPF</h1>
-				<form class="form">
-					<input type="text" placeholder="CPF">
-					<input type="password" placeholder="Senha">
-					<button type="submit" id="login-button">CONSULTAR</button>
-				</form>
-			</div>
+    <div class="main-scroller">
+        <header>
+            <div class="header-wrapper">
+                <div class="logo-wrapper"></div>
+            </div>
+        </header>
+        <div class="main-wrapper">
+            <div class="container-triangles">
+                <h1>Consultar CPF</h1>
+                <form class="form">
+                    <input type="text" placeholder="CPF">
+                    <input type="password" placeholder="Senha">
+                    <button type="submit" id="login-button">CONSULTAR</button>
+                </form>
+            </div>
 
-			<ul class="triangles">
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</div>
-		<div class="customer-data">
-			<div class="col-sm-12">
-				<div class="row">
-					<div class="container-customer">
-						<div class="title-wrapper">
-							<h2>Histórico do cliente:</h2>							
-						</div>
-						<div class="flex-container">
-							<div class="form-group">
-								<label class="control-label col-sm-3">Cliente:</label>
-								<p class="col-sm-9">Daniel Soares Pimenta</p>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-sm-3">CPF:</label>
-								<p class="col-sm-9">12345678911</p>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-sm-3">Orgão:</label>
-								<p class="col-sm-9">Empresa XYZ</p>
-							</div>
-							<div class="form-group">
-								<label class="control-label col-sm-3">Data de nascimento:</label>
-								<p class="col-sm-9">25/06/1986</p>
-							</div>
-							<button class="md-trigger detail-btn" data-modal="modal-detalhes">Liquidar</button>
-							<!--<button class="md-trigger modal-btn" data-modal="modal-boleto">Amortizar</button>-->
+            <ul class="triangles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="customer-data">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="container-customer">
+                        <div class="title-wrapper">
+                            <h2>Histórico do cliente:</h2>
+                        </div>
+                        <div class="flex-container">
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Cliente:</label>
+                                <p class="col-sm-9">Daniel Soares Pimenta</p>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">CPF:</label>
+                                <p class="col-sm-9">12345678911</p>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Orgão:</label>
+                                <p class="col-sm-9">Empresa XYZ</p>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3">Data de nascimento:</label>
+                                <p class="col-sm-9">25/06/1986</p>
+                            </div>
+                            <button class="detail-btn" id="expandBtn">Liquidar</button>
+                            <!--<button class="md-trigger modal-btn" data-modal="modal-boleto">Amortizar</button>-->
+                            <div class="expanded-content" id="expandWrapper">
+                                <div class="col-sm-12">
+                                    <div class="row">
+                                        <div class="container-customer second-container">
+                                            <div class="flex-container">
+                                                <div class="row">
+                                                    <label class="control-label col-sm-4">Data Liquidação:</label>
+                                                    <input id="datepicker" class="col-sm-4" data-toggle="datepicker" />
+                                                    <button class="col-sm-3 btn-custom" style="margin-left: 10px">Calcular</button>
+                                                </div>
+                                                <div class="row">
+                                                    <label class="control-label col-sm-4">Valor Liquidação:</label>
+                                                    <input class="col-sm-4" id="money" />
+                                                </div>
+                                                <div class="row">
+                                                    <ul>
+                                                        <li>Juros</li>
+                                                        <li>Impostos</li>
+                                                        <li>Outros encargos</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="row">
+                                                    <button class="md-trigger btn-custom btn-boleto" data-modal="modal-boleto">Gerar Boleto</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<div class="md-container md-effect-3" id="modal-detalhes">
-		<div class="md-content">
-			<h3>Liquidar</h3>
-			<div class="col-sm-12">
-				<div class="row">
-					<div class="container-customer">
-						<div class="flex-container">
-							<div class="row">
-								<label class="control-label col-sm-3">Data Liquidação:</label>
-								<input id="datepicker" class="col-sm-3" data-toggle="datepicker"/>
-								<button class="col-sm-2 btn-custom">Calcular</button>
-							</div>
-							<div class="row">
-								<label class="control-label col-sm-3">Valor Liquidação:</label>
-								<input class="col-sm-3" value="x" readonly />
-							</div>
-							<div class="row">
-								<ul>
-									<li>Juros</li>
-									<li>Impostos</li>
-									<li>Outros encargos</li>
-								</ul>
-							</div>                            
-							<div class="row">
-								<button class="md-close btn-custom" data-modal="modal-detalhes">Voltar</button>
-								<button class="md-trigger btn-custom btn-boleto">Gerar Boleto</button>
-							</div>                            
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 
-	<div class="md-container success-modal md-effect-5" id="modal-boleto">
-		<div class="md-content">
-			<h3>Boleto gerado com sucesso!</h3>
-			<div>
-				<p>Efetue o pagamento do boleto para que a dívida seja quitada</p>
-				<button class="md-close" style="margin: 0 auto;">Ok</button>
-			</div>
-		</div>
-	</div>
+    <div class="md-container success-modal md-effect-5" id="modal-boleto">
+        <div class="md-content">
+            <h3>Boleto gerado com sucesso!</h3>
+            <div>
+                <p>Efetue o pagamento do boleto para que a dívida seja quitada</p>
+                <button class="md-close" style="margin: 0 auto;">Ok</button>
+            </div>
+        </div>
+    </div>
 
-	<div class="md-overlay"></div>
+    <div class="md-overlay"></div>
 
-	<script type="text/javascript" src="../scripts/jquery.min.js"></script>
-	<script type="text/javascript" src="../scripts/jquery-niftymodals-master/dist/jquery.niftymodals.js"></script>
-	<script type="text/javascript" src="../scripts/Bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../scripts/datepicker-master/dist/datepicker.js"></script>
-	<script type="text/javascript" src="../scripts/custom.js"></script>
+    <div class="spin-overlay" id="spinner">
+        <div class="flex-spin">
+            <div class="lds-ripple"><div></div><div></div></div>
+        </div>
+    </div>
+
+    
+
+    <script type="text/javascript" src="../scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery-niftymodals-master/dist/jquery.niftymodals.js"></script>
+    <script type="text/javascript" src="../scripts/Bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../scripts/datepicker-master/dist/datepicker.js"></script>
+    <script type="text/javascript" src="../scripts/Inputmask-4.x/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <script type="text/javascript" src="../scripts/custom.js"></script>
 </body>
 </html>
